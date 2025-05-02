@@ -1,0 +1,48 @@
+Test Plan for GolfScore Project
+1.0 Introduction
+1.1 Objective
+The objective of this test plan is to define the strategy, resources, and schedule for the testing of the GolfScore application, a command-line program designed to process golf tournament scores and generate reports.
+1.2 Project Description
+GolfScore is a CLI-based software tool that processes golf tournament data and produces three types of reports: Tournament Ranking Report, Golfer Report, and Course Report. Input data includes course configurations and player stroke counts. Outputs are generated in printable text format.
+1.3 Process Tailoring
+This project will use a tailored software testing process focusing on manual testing of input handling, scoring logic, and report generation. Testing types include functional, input validation, and error handling.
+1.4 Referenced Documents
+- Software Requirements Specification (golfsrsrev.pdf)
+- Test Plan Template
+- Test Plan Example
+2.0 Assumptions/Dependencies
+It is assumed that the input files are provided in the correct format as specified. The application will be tested on a Windows-compatible PC. No GUI testing is required as the application is CLI-based.
+3.0 Test Requirements
+- Validate command-line parameter handling
+- Validate scoring calculations based on par values
+- Validate output report formats and correctness
+- Validate input error handling (e.g., non-numeric, duplicate entries, incorrect par values)
+4.0 Test Tools
+- Text editor for creating test input files
+- Command line for executing the application
+- File comparison tools to validate outputs
+- Log viewer or terminal output capture
+5.0 Resource Requirements
+1 QA Engineer with basic command-line knowledge and manual testing experience. Approximately 12–16 hours estimated for test design, execution, and documentation.
+6.0 Test Schedule
+- Day 1: Review requirements and prepare test data
+- Day 2: Execute test cases and log results
+- Day 3: Review and finalize test report
+7.0 Risks/Mitigation
+- Risk: Incorrect input format may cause test failure
+Mitigation: Validate test files before execution
+- Risk: Misinterpretation of scoring rules
+Mitigation: Reconfirm scoring logic with SRS
+8.0 Metrics
+- Number of defects found
+- Number of passed/failed test cases
+- Total test execution time
+Appendix – Sample Test Case
+Test Case ID: TC001
+Title: Accept valid course number (1)
+Preconditions: Valid formatted input file provided
+Steps:
+ 1. Run command: >golf -c input.txt outputdir
+ 2. Ensure input.txt includes course number 1
+Expected Result: Course report is generated and includes data for course 1
+Status: To be tested
